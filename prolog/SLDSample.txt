@@ -1,0 +1,41 @@
+SLDTree
+(Subs [])
+[Pred "sibling" [App "sally" [],Var "W"]]
+[
+    SLDTree
+    (Subs [(Var "gnn1",App "sally" []),(Var "gnn2",Var "W")])
+    [Pred "parentChild" [Var "gnn3",App "sally" []],Pred "parentChild" [Var "gnn3",Var "W"]]
+    [
+        SLDTree
+        (Subs [(Var "gnn4",Var "gnn3"),(Var "gnn5",App "sally" [])])
+        [Pred "fatherChild" [Var "gnn3",App "sally" []],Pred "parentChild" [Var "gnn3",Var "W"]]
+        [
+            SLDTree
+            (Subs [(Var "gnn3",App "tom" [])])
+            [Pred "parentChild" [App "tom" [],Var "W"]]
+            [
+                SLDTree
+                (Subs [(Var "gnn6",App "tom" []),(Var "gnn7",Var "W")])
+                [Pred "fatherChild" [App "tom" [],Var "W"]]
+                [
+                    SLDTree
+                    (Subs [(Var "W",App "sally" [])])
+                    []
+                    [],
+                    SLDTree
+                    (Subs [(Var "W",App "erica" [])])
+                    []
+                    []
+                ],
+                SLDTree
+                (Subs [(Var "gnn6",App "tom" []),(Var "gnn7",Var "W")])
+                [Pred "motherChild" [App "tom" [],Var "W"]]
+                []
+            ]
+        ],
+        SLDTree
+        (Subs [(Var "gnn4",Var "gnn3"),(Var "gnn5",App "sally" [])])
+        [Pred "motherChild" [Var "gnn3",App "sally" []],Pred "parentChild" [Var "gnn3",Var "W"]]
+        []
+    ]
+]
