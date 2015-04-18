@@ -1,0 +1,12 @@
+sibling(X, Y)      :- 
+	parentChild(Z, X),
+	parentChild(Z, Y).
+
+parentChild(X, Y) :- fatherChild(X, Y).
+parentChild(X, Y) :- motherChild(X, Y).
+
+fatherChild(bob, cedella).
+fatherChild(bob, ziggy). 
+
+:-sibling(ziggy,W).
+
